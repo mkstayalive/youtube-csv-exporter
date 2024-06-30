@@ -1,6 +1,5 @@
 `youtube_video_subs_downloader.py` and `youtube_playlists_meta.py` scripts.
 
-````markdown
 # YouTube Video Subtitles Downloader and Playlist Metadata Fetcher
 
 This repository contains two Python scripts for interacting with YouTube:
@@ -52,7 +51,6 @@ Processing video 1/126: Basic Lesson For All Tabla Beginners| Best Practice Bol 
 ...
 CSV file 'out/tcv_videos.csv' updated with new entries.
 ```
-````
 
 ### youtube_playlists_meta.py
 
@@ -105,7 +103,3 @@ If you'd like to contribute to this project, please fork the repository and use 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-```
-
-```
