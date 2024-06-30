@@ -200,7 +200,11 @@ def main():
                 writer.writerow(["title", "url", "description", "subtitles"])
                 
             for index, line in enumerate(data):
-                title, url = line.split("\t")
+                if "\t" not in line:
+                    print(f"Skipping malformed line: {line}", file=sys.stderr)
+                    continue
+                
+                title, url = line.split("\t", 1)
                 if url in existing_urls:
                     print(f"Skipping video {index+1}/{len(data)}: {title} ({url}) - Already exists in the CSV file.")
                     continue
