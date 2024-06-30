@@ -43,11 +43,14 @@ def main():
             print("Invalid YouTube URL. Please enter a valid channel playlists URL.")
             continue
         
-        output_file = input("Enter the output CSV file name (should end with .csv): ").strip()
+        output_file_name = input("Enter the output CSV file name (should end with .csv): ").strip()
         
-        if not output_file.endswith(".csv"):
+        if not output_file_name.endswith(".csv"):
             print("Output file should end with .csv. Please enter a valid file name.")
             continue
+        
+        output_file = os.path.join("out", output_file_name)
+        os.makedirs("out", exist_ok=True)
         
         playlists = get_playlist_urls(channel_playlists_url)
         
